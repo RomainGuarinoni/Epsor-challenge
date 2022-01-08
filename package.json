@@ -4,7 +4,8 @@
   "description": "Epsor's challenge for the recruitment process of fullstack interns developpers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint" : "eslint --fix './**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,18 @@
   },
   "homepage": "https://github.com/RomainGuarinoni/Espor-challenge#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^16.0.0",
-    "husky": "^7.0.4"
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15"
   }
 }
