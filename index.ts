@@ -1,19 +1,35 @@
 import 'reflect-metadata';
 import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { buildSchema, Resolver, Query } from 'type-graphql';
+import connectMongoDB from './db/index';
+import {
+  buildSchema,
+  Resolver,
+  Query,
+  Arg,
+  InputType,
+  Field,
+} from 'type-graphql';
 
 const PORT = process.env.PORT || 3000;
 
+@InputType()
+export class HelloInput {
+  @Field({ nullable: false })
+  name: string;
+}
+
 @Resolver()
-class HelloResolver {
+export class HelloResolver {
   @Query(() => String)
-  async HelloWorld() {
-    return 'Hello World';
+  async HelloWorld(@Arg('name') name: string) {
+    return 'Welcome World ' + name;
   }
 }
 
 async function start() {
+  await connectMongoDB();
+
   const schema = await buildSchema({
     resolvers: [HelloResolver],
   });
