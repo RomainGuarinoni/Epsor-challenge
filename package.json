@@ -1,0 +1,24 @@
+{
+  "name": "epsor-challenge",
+  "version": "1.0.0",
+  "description": "Epsor's challenge for the recruitment process of fullstack interns developpers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomainGuarinoni/Espor-challenge.git"
+  },
+  "author": "Romain Guarinoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomainGuarinoni/Espor-challenge/issues"
+  },
+  "homepage": "https://github.com/RomainGuarinoni/Espor-challenge#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "husky": "^7.0.4"
+  }
+}
