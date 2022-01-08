@@ -50,3 +50,5 @@ computer :
    ```sh
    docker-compose up --build
    ```
+
+4. Go the graphql visualizer `http://localhost:3000/graphql`
