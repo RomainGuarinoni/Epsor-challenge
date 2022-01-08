@@ -1,7 +1,8 @@
 import 'reflect-metadata';
 import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import connectMongoDB from './db/index';
+import { createConnection } from 'typeorm';
+
 import {
   buildSchema,
   Resolver,
@@ -13,12 +14,6 @@ import {
 
 const PORT = process.env.PORT || 3000;
 
-@InputType()
-export class HelloInput {
-  @Field({ nullable: false })
-  name: string;
-}
-
 @Resolver()
 export class HelloResolver {
   @Query(() => String)
@@ -28,7 +23,15 @@ export class HelloResolver {
 }
 
 async function start() {
-  await connectMongoDB();
+  try {
+    await createConnection();
+    console.log('💾 Connection to mongoDB successfull');
+  } catch (err) {
+    console.log(
+      '❌ Error happened while connecting to mongoDB',
+      JSON.stringify(err),
+    );
+  }
 
   const schema = await buildSchema({
     resolvers: [HelloResolver],

@@ -1,0 +1,8 @@
+{
+    "type": "mongodb",
+    "host": "mongodb",
+    "database": "epsor-challenge-mongo",
+    "port": "27017",
+    "synchronize": true,
+    "entities": ["./db/models/*.ts"]
+   }
