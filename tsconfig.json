@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es6",
+      "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+      "moduleResolution": "node",
+
+      "removeComments": false,
+      "preserveConstEnums": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "declaration": true,
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "composite": false,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "skipLibCheck": true,
+
+      "rootDir": "./",
+      "outDir": "./build",
+      "baseUrl" : ".",
+      "typeRoots": [
+        "@types",
+        "./node_modules/@types",
+      ],
+      // Ensure that .d.ts files are created by tsc, but not .js files
+      "emitDeclarationOnly": true,
+      // Ensure that Babel can safely transpile files in the TypeScript project
+      "isolatedModules": true   
+    },
+    "include": [
+      "**/*.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "build"
+    ],
+   
+  }
