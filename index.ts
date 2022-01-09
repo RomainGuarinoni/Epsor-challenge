@@ -1,21 +1,14 @@
 import 'reflect-metadata';
 import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { createConnection } from 'typeorm';
+import connectionDB from './db/index';
 import createSchema from './utils/createSchema';
 
 const PORT = process.env.PORT || 3000;
 
 async function start() {
-  try {
-    await createConnection();
-    console.log('💾 Connection to mongoDB successfull');
-  } catch (err) {
-    console.log(
-      '❌ Error happened while connecting to mongoDB',
-      JSON.stringify(err),
-    );
-  }
+  // Connect to MongoDB
+  await connectionDB();
 
   const schema = await createSchema();
 

@@ -1,6 +1,6 @@
 import { buildSchema } from 'type-graphql';
 
-import { BookResolver } from '../graphql/bookResolver';
+import { BookResolver } from '../graphql/resolvers/bookResolver';
 
 export default async function createSchema() {
   return await buildSchema({
