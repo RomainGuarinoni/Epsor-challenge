@@ -43,6 +43,7 @@
     "apollo-server-express": "^2.6.1",
     "express": "^4.17.2",
     "graphql": "^15.8.0",
+    "kafkajs": "^1.15.0",
     "mongodb": "^4.3.0",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.1.1"
