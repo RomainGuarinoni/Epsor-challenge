@@ -45,7 +45,7 @@ computer :
    docker-compose up
    ```
 
-   You need to build the container the first time you run it :
+   > You need to build the container the first time you run it :
 
    ```sh
    docker-compose up --build
@@ -54,23 +54,26 @@ computer :
 4. Open another terminal tab with `CTRL + ALT + T` and run this command to start
    the application :
 
-   ```sh
-   npm run dev
-   ```
+> Wait until the docker-compose finished to start all the containers ( few
+> seconds)
 
-   Wait until you see this log in the console :
+```sh
+npm run dev
+```
 
-   ```sh
-   💾 Connection to mongoDB successfull
-   ✏️ Kafka book topic created
-   🗒️ Kafka consumer subscribed to book topic
-   🔌 Server is listening on http://localhost:3000
-   📕 graphql visualizer on http://localhost:3000/graphql
+Wait until you see this log in the console :
 
-   ```
+```sh
+💾 Connection to mongoDB successfull
+✏️ Kafka book topic created
+🗒️ Kafka consumer subscribed to book topic
+🔌 Server is listening on http://localhost:3000
+📕 graphql visualizer on http://localhost:3000/graphql
 
-   > This command might take few seconds to run because of the subscription of
-   > kafka consumer
+```
+
+> This command might take few seconds to run because of the subscription of
+> kafka consumer
 
 5. Go the graphql visualizer http://localhost:3000/graphql
 
