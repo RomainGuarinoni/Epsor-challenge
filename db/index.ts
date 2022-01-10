@@ -2,7 +2,7 @@ import Mongoose from 'mongoose';
 
 export default async function connectionDB() {
   try {
-    await Mongoose.connect('mongodb://mongodb:27017/epsor-challenge-mongo');
+    await Mongoose.connect('mongodb://localhost:27017/epsor-challenge-mongo');
     console.log('💾 Connection to mongoDB successfull');
   } catch (err) {
     console.log(
