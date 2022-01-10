@@ -5,7 +5,7 @@
         "@babel/env",
         {
           "targets": {
-            "node": "1current"
+            "node": "current"
           }
         }
       ]
