@@ -27,5 +27,6 @@ export default async function createPartition() {
         JSON.stringify(err),
       );
     }
+    throw new Error(err);
   }
 }
