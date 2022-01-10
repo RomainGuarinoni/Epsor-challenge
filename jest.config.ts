@@ -1,8 +1,11 @@
-import type { Config } from '@jest/types';
+const config = {
+  verbose: true,
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 
-// Or async function
-export default async (): Promise<Config.InitialOptions> => {
-  return {
-    verbose: true,
-  };
+  testEnvironment: 'node',
 };
+
+export default config;
