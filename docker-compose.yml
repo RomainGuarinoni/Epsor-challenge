@@ -1,25 +1,6 @@
 version: '3.5'
 
 services:
-  # app:
-  #   container_name: epsor-challenge-app
-  #   restart : always
-  #   build: .
-  #   depends_on:
-  #     - mongodb
-  #     - zookeeper
-  #     - kafka
-  #   environment:
-  #     NODE_ENV: development
-  #     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-  #     PORT: 3000
-  #   ports:
-  #     - '3000:3000'
-  #   command: npm run dev
-  #   volumes:
-  #     - .:/app/
-  #     - /app/node_modules
-
   mongodb:
     container_name: epsor-challenge-mongo
     image : mongo
