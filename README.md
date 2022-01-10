@@ -73,3 +73,13 @@ computer :
    > kafka consumer
 
 5. Go the graphql visualizer http://localhost:3000/graphql
+
+## FAQ
+
+### The application can't connect to Kafka service
+
+Sometimes, the Kafka container shuts down (you can see it in the docker-compose
+terminal with a kafka message exiting with code 1).
+
+In this case, just shut down the docker containers with `docker-compose down`
+and reboot it with `docker-compose up`
