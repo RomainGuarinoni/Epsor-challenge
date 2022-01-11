@@ -11,6 +11,7 @@ export default async function produceKafkaMessage(msg: Book) {
       topic: 'book',
       messages: [
         {
+          key: 'book-created',
           value: JSON.stringify(msg),
         },
       ],
